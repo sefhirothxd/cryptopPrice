@@ -13,9 +13,10 @@ function App() {
 		setcoins(res.data);
 	};
 	useEffect(() => {
+		getData();
 		const interval = setInterval(() => {
 			getData();
-		}, 5000);
+		}, 60000);
 		return () => clearInterval(interval);
 	}, []);
 
